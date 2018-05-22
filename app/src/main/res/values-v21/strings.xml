@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="numbers_tab_tite">Numbers</string>
+    <string name="colors_tab_title">Colors</string>
+    <string name="numbers_tab_title">Numbers</string>
+    <string name="family_tab_title">Family</string>
+    <string name="phrases_tab_title">Phrases</string>
+</resources>

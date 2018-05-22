@@ -1,0 +1,65 @@
+<!-- Copyright (C) 2016 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Miwok</string>
+
+    <!-- Category name for phrases [CHAR LIMIT=20] -->
+    <string name="category_phrases">Phrases</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_colors">Colors</string>
+
+    <!-- Category name for the vocabulary words for numbers [CHAR LIMIT=20] -->
+    <string name="category_numbers">Numbers</string>
+
+    <!-- Category name for the vocabulary words for family members [CHAR LIMIT=20] -->
+    <string name="category_family">Family Members</string>
+    <string name="one">one</string>
+    <string name="two">two</string>
+    <string name="three">three</string>
+    <string name="four">four</string>
+    <string name="five">five</string>
+    <string name="six">six</string>
+    <string name="seven">seven</string>
+    <string name="eight">eight</string>
+    <string name="nine">nine</string>
+    <string name="ten">ten</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="brown">brown</string>
+    <string name="gray">gray</string>
+    <string name="black">black</string>
+    <string name="white">white</string>
+    <string name="mustard_yellow">mustard_yellow</string>
+    <string name="dusty_yellow">dusty_yellow</string>
+    <string name="red_miwok">weṭeṭṭi</string>
+    <string name="green_miwok">chokokki</string>
+    <string name="brown_miwok">ṭakaakki</string>
+    <string name="gray_miwok">ṭopoppi</string>
+    <string name="black_miwok">kululli</string>
+    <string name="white_miwok">kelelli</string>
+    <string name="dusty_yellow_miwok">ṭopiisә</string>
+    <string name="mustard_yellow_miwok">chiwiiṭә</string>
+    <string name="play">Play</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="colors_tab_title">Colors</string>
+    <string name="numbers_tab_title">Numbers</string>
+    <string name="family_tab_title">Family</string>
+    <string name="phrases_tab_title">Phrases</string>
+
+</resources>
