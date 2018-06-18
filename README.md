@@ -17,4 +17,4 @@ This version of the app uses an activity, multiple fragments, a FragmentPagerAda
 
 Each entry is encapsulated in an Object called a Word.
 The words are stored in ArrayLists, one Arrayist per category.
-Each word contains an english String, a Miwok String and an Image resource id.
+Each word contains an english String, a Miwok String a Sound resource Id and an Image resource id.
