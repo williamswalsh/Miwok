@@ -1,6 +1,5 @@
 package com.example.android.miwok;
 
-
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -11,9 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import java.util.ArrayList;
 
+/**
+ * Class which represents the business logic for the FamilyFragment of the MainActivity.
+ *
+ * <p>
+ * Author:      William Walsh
+ * Version:     2.0 (Fragments)
+ * Date:        18-05-18
+ */
 public class FamilyFragment extends Fragment {
 
     // AudioManager responsible for getting and abandoning AudioFocus
