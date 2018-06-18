@@ -10,7 +10,6 @@ import android.support.v7.app.AppCompatActivity;
  * Class which represents the Main Activity of the application.
  * The ListViews, Fragments and View Pager will be displayed within this activity.
  *
- * <p>
  * Author:      William Walsh
  * Version:     2.0 (Fragments)
  * Date:        19-6-2018
