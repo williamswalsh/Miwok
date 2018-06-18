@@ -39,10 +39,12 @@ public class ColorsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.activity_list_view, container, false);
 
-        /** TODO: Insert all the code from the NumberActivity’s onCreate() method after the setContentView method call */
-
+        // Arraylist of words to display in list.
         final ArrayList<Word> colors = new ArrayList<Word>();
 
+        
+        // Each word has its own English String resource, Miwok language String resource, Image resource Id & Sound resource Id.  
+        // Adding color words to colors ArrayList
         colors.add(new Word(getString(R.string.red), getString(R.string.red_miwok), R.drawable.color_red, R.raw.color_red));
         colors.add(new Word(getString(R.string.green), getString(R.string.green_miwok), R.drawable.color_green, R.raw.color_green));
         colors.add(new Word(getString(R.string.brown), getString(R.string.brown_miwok), R.drawable.color_brown, R.raw.color_brown));
@@ -52,16 +54,16 @@ public class ColorsFragment extends Fragment {
         colors.add(new Word(getString(R.string.dusty_yellow), getString(R.string.dusty_yellow_miwok), R.drawable.color_dusty_yellow));
         colors.add(new Word(getString(R.string.mustard_yellow), getString(R.string.mustard_yellow_miwok), R.drawable.color_mustard_yellow, R.raw.color_mustard_yellow));
 
-        // Create ArrayAdapter Point it to context and colors ArrayList
+        // Create ArrayAdapter Point it to the activity context and colors ArrayList
         WordAdapter colorAdapter = new WordAdapter(getActivity(), colors, R.color.category_colors);
 
-        // Get ListView.xml ref
+        // Get ListView.xml reference
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
         // Associate adapter to ListView
         listView.setAdapter(colorAdapter);
 
-
+        // Create click listener for all the Items in the ListView.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -82,8 +84,6 @@ public class ColorsFragment extends Fragment {
                     // Get the data associated with the list element selected using the position index
                     Word word = colors.get(position);
 
-                    // register media buttons
-
                     // Create MediaPlayer
                     mediaPlayer = MediaPlayer.create(getActivity(), word.getMusicRef());
 
@@ -102,13 +102,14 @@ public class ColorsFragment extends Fragment {
     public void onStop() {
         super.onStop();
 
-        // When the App goes into the Stopped State release the
+        // When the App goes into the Stopped State release the MediaPlayer resource
         releaseMediaPlayer();
     }
 
     // Listener which listens for when media playback completes
     private MediaPlayer.OnCompletionListener mpCompletionListener = new MediaPlayer.OnCompletionListener() {
-
+        
+        // Release Media Player resource if finished playing the sound.
         @Override
         public void onCompletion(MediaPlayer mp) {
             releaseMediaPlayer();
@@ -122,14 +123,15 @@ public class ColorsFragment extends Fragment {
         @Override
         public void onAudioFocusChange(int i) {
 
+            // If the AudioFocus is lost temporarily or when its lost yet ducking is allowed
             if (i == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT || i == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
-                // If the AudioFocus is lost temporarily or when its lost yet ducking is allowed
-
+                
                 // Pause the media player
                 mediaPlayer.pause();
 
                 // Change playback to beginning
                 mediaPlayer.seekTo(0);
+                
             } else if (i == AudioManager.AUDIOFOCUS_GAIN) {
                 // If you gain the audiofocus
                 // Resume playing music
@@ -147,9 +149,10 @@ public class ColorsFragment extends Fragment {
     };
 
     /**
-     * Clean up the media player by releasing its resources.
+     * Clean up the media player by releasing associated resources.
      */
     private final void releaseMediaPlayer() {
+        
         // If the media player is not null, then it may be currently playing a sound.
         if (mediaPlayer != null) {
             // Regardless of the current state of the media player, release its resources
