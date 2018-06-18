@@ -15,7 +15,6 @@ Each word has a descriptive image beside it to aide in understanding of the word
 This app was built during the course of the Udacity Android Development Course.
 This version of the app uses an activity, multiple fragments, a FragmentPagerAdapter, a custom ArrayAdapter and multiple ListViews.
 
-Each entry data is encapsulated in an Object called a Word.
+Each entry is encapsulated in an Object called a Word.
 The words are stored in ArrayLists, one Arrayist per category.
 Each word contains an english String, a Miwok String and an Image resource id.
-
